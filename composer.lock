@@ -1,0 +1,126 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "f152d7a5fee2c87ccf75931eb0a95dcc",
+    "packages": [
+        {
+            "name": "bramus/router",
+            "version": "1.6.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bramus/router.git",
+                "reference": "55657b76da8a0a509250fb55b9dd24e1aa237eba"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bramus/router/zipball/55657b76da8a0a509250fb55b9dd24e1aa237eba",
+                "reference": "55657b76da8a0a509250fb55b9dd24e1aa237eba",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "~2.14",
+                "phpunit/php-code-coverage": "~2.0",
+                "phpunit/phpunit": "~4.8"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Bramus": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bram(us) Van Damme",
+                    "email": "bramus@bram.us",
+                    "homepage": "http://www.bram.us"
+                }
+            ],
+            "description": "A lightweight and simple object oriented PHP Router",
+            "homepage": "https://github.com/bramus/router",
+            "keywords": [
+                "router",
+                "routing"
+            ],
+            "support": {
+                "issues": "https://github.com/bramus/router/issues",
+                "source": "https://github.com/bramus/router/tree/1.6.1"
+            },
+            "time": "2021-11-18T19:24:07+00:00"
+        },
+        {
+            "name": "jr-cologne/db-class",
+            "version": "2.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jr-cologne/db-class.git",
+                "reference": "6578f51b5fb8ffe96687bcf1b8e490c2c848a396"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jr-cologne/db-class/zipball/6578f51b5fb8ffe96687bcf1b8e490c2c848a396",
+                "reference": "6578f51b5fb8ffe96687bcf1b8e490c2c848a396",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0"
+            },
+            "require-dev": {
+                "phpunit/dbunit": "^4.0",
+                "phpunit/phpunit": "^7"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "JRCologne\\Utils\\Database\\": "src/",
+                    "JRCologne\\Utils\\Database\\Tests\\": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "JR Cologne",
+                    "email": "kontakt@jr-cologne.de",
+                    "homepage": "https://jr-cologne.de/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A simple database class with PHP, PDO and a query builder.",
+            "homepage": "https://github.com/jr-cologne/db-class",
+            "keywords": [
+                "database",
+                "db-class",
+                "pdo",
+                "php",
+                "query-builder"
+            ],
+            "support": {
+                "docs": "https://github.com/jr-cologne/db-class/blob/README.md",
+                "issues": "https://github.com/jr-cologne/db-class/issues",
+                "source": "https://github.com/jr-cologne/db-class/tree/v2.4.0"
+            },
+            "time": "2018-08-26T12:47:22+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.1.0"
+}
