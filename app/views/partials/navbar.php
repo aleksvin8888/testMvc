@@ -11,13 +11,22 @@
         <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample08">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active" aria-current="page"
+                       href="/">
+                        Home
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Users</a>
+                    <a class="nav-link"
+                       href="/users">
+                        Users
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Departments</a>
+                    <a class="nav-link"
+                       href="/departments">
+                        Departments
+                    </a>
                 </li>
             </ul>
         </div>

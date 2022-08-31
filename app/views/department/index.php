@@ -68,20 +68,57 @@
 </head>
 <body>
 
-
 <main>
-
     <?php include DOCUMENT_ROOT . '/app/views/partials/navbar.php' ?>
 
 
-    <div class="container">
-        Department Index
+    <div class="container ">
+        <div class="row y-5">
+
+            <div class="m-2">
+                <a class="btn btn-primary btn-sm" href="#" title="Create">
+                    Create new department <i class="fa-solid fa-plus"></i>
+                </a>
+
+            </div>
+
+            <table class="table table-success table-striped">
+                <thead>
+                <tr>
+                    <th>##</th>
+                    <th>Title</th>
+                    <th>Settings</th>
+                </tr>
+                </thead>
+                <tbody>
+               <?php foreach($departments as $department)
+               { ?>
+
+                   <tr>
+                       <td><?php echo  $department['id']  ?></td>
+                       <td>
+                           <a class="text-decoration-none "
+                              href="#">
+                               <?php echo  $department['title']  ?>
+                           </a>
+                       </td>
+                       <td>
+                           <a class="btn btn-outline-danger btn-sm" href="#">
+                               delete
+                           </a>
+                       </td>
+                   </tr>
+
+              <?php }?>
+
+                </tbody>
+            </table>
+        </div>
     </div>
 
 
 
 </main>
-
 
 <script src="/assets/dist/js/bootstrap.bundle.min.js"></script>
 

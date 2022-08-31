@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 
+use App\Models\DepartmentModel;
 use JRCologne\Utils\Database\DB;
 use JRCologne\Utils\Database\QueryBuilder;
 
@@ -14,9 +15,8 @@ class DepartmentController
     public function index()
     {
 
-        $data = [
-          'title' => "test title"
-        ];
+        $departments = new DepartmentModel();
+        $departments = $departments->getAll();
 
         require_once DOCUMENT_ROOT . '/app/views/department/index.php';
 
