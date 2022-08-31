@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f152d7a5fee2c87ccf75931eb0a95dcc",
+    "content-hash": "333b62f2fc4c6a4001fd219336526fac",
     "packages": [
         {
             "name": "bramus/router",
@@ -58,66 +58,62 @@
             "time": "2021-11-18T19:24:07+00:00"
         },
         {
-            "name": "jr-cologne/db-class",
-            "version": "2.4.0",
+            "name": "thingengineer/mysqli-database-class",
+            "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/jr-cologne/db-class.git",
-                "reference": "6578f51b5fb8ffe96687bcf1b8e490c2c848a396"
+                "url": "https://github.com/ThingEngineer/PHP-MySQLi-Database-Class.git",
+                "reference": "16564ba0717fad64617a1ce4a8d3f9b90e68c7c2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jr-cologne/db-class/zipball/6578f51b5fb8ffe96687bcf1b8e490c2c848a396",
-                "reference": "6578f51b5fb8ffe96687bcf1b8e490c2c848a396",
+                "url": "https://api.github.com/repos/ThingEngineer/PHP-MySQLi-Database-Class/zipball/16564ba0717fad64617a1ce4a8d3f9b90e68c7c2",
+                "reference": "16564ba0717fad64617a1ce4a8d3f9b90e68c7c2",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.0"
+                "php": ">=5.3.0"
             },
-            "require-dev": {
-                "phpunit/dbunit": "^4.0",
-                "phpunit/phpunit": "^7"
-            },
+            "default-branch": true,
             "type": "library",
             "autoload": {
-                "psr-4": {
-                    "JRCologne\\Utils\\Database\\": "src/",
-                    "JRCologne\\Utils\\Database\\Tests\\": "tests/"
-                }
+                "files": [
+                    "MysqliDb.php",
+                    "dbObject.php"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "MIT"
+                "GPL-3.0-or-later"
             ],
             "authors": [
                 {
-                    "name": "JR Cologne",
-                    "email": "kontakt@jr-cologne.de",
-                    "homepage": "https://jr-cologne.de/",
+                    "name": "Josh Campbell",
+                    "email": "josh.lee.campbell@gmail.com",
+                    "homepage": "https://github.com/thingengineer",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Alexander V. Butenko",
+                    "email": "a.butenka@gmail.com",
+                    "homepage": "http://smarttechdo.com",
                     "role": "Developer"
                 }
             ],
-            "description": "A simple database class with PHP, PDO and a query builder.",
-            "homepage": "https://github.com/jr-cologne/db-class",
-            "keywords": [
-                "database",
-                "db-class",
-                "pdo",
-                "php",
-                "query-builder"
-            ],
+            "description": "PHP MySQL Wrapper and object mapper which utilizes MySQLi and prepared statements",
             "support": {
-                "docs": "https://github.com/jr-cologne/db-class/blob/README.md",
-                "issues": "https://github.com/jr-cologne/db-class/issues",
-                "source": "https://github.com/jr-cologne/db-class/tree/v2.4.0"
+                "issues": "https://github.com/ThingEngineer/PHP-MySQLi-Database-Class/issues",
+                "source": "https://github.com/ThingEngineer/PHP-MySQLi-Database-Class/tree/master"
             },
-            "time": "2018-08-26T12:47:22+00:00"
+            "time": "2020-10-14T10:55:58+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "thingengineer/mysqli-database-class": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

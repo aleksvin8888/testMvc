@@ -74,8 +74,53 @@
     <?php include DOCUMENT_ROOT . '/app/views/partials/navbar.php' ?>
 
 
-    <div class="container">
-        User Show
+    <div class="container ">
+        <div class="card mb-4 col-12 strpied-tabled-with-hover rounded-0">
+            <div class="card-body table-full-width table-responsive">
+                <table class="table table-hover" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                    <tr class="admin-tr-red">
+                        <th>#</th>
+                        <th>##</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Id</td>
+                        <td><?php echo $user[0]['id'] ?></td>
+                    </tr>
+                    <tr>
+                        <td>Nmae</td>
+                        <td><?php echo $user[0]['first_name'] ?></td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td><?php echo $user[0]['email'] ?></td>
+                    </tr>
+                    <tr>
+                        <td>Department</td>
+                        <td>
+                            <a href="#" ><?php echo $user[0]['title'] ?></a>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Address</td>
+                        <td><?php echo $user[0]['address'] ?></td>
+                    </tr>
+                    <tr>
+                        <td>Phone</td>
+                        <td><?php echo $user[0]['phone'] ?></td>
+                    </tr>
+                    <tr>
+                        <td>Comment</td>
+                        <td><?php echo $user[0]['comment'] ?></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
     </div>
 
 

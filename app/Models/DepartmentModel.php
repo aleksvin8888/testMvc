@@ -3,10 +3,6 @@
 namespace App\Models;
 
 
-use JRCologne\Utils\Database\DB;
-use JRCologne\Utils\Database\QueryBuilder;
-
-
 class DepartmentModel extends BaseModel
 {
     protected $id;
@@ -18,9 +14,7 @@ class DepartmentModel extends BaseModel
 
     public function getAll()
     {
-        $conn = $this->conn();
-
-        $data = $conn->table('departments')->select('*')->retrieve();
+        $data = $this->conn()->get('departments');
 
         return $data;
 

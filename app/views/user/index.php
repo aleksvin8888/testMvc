@@ -74,8 +74,38 @@
     <?php include DOCUMENT_ROOT . '/app/views/partials/navbar.php' ?>
 
 
-    <div class="container">
-        User Index
+    <div class="container ">
+        <div class="row y-5">
+            <table class="table table-success table-striped">
+                <thead>
+                <tr>
+                    <th>##</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Department</th>
+                </tr>
+                </thead>
+                <tbody>
+                <?php foreach($users as $user)
+                { ?>
+
+                    <tr>
+                        <td><?php echo  $user['id']  ?></td>
+                        <td>
+                            <a class="text-decoration-none "
+                               href="/user/<?php echo  $user['id']  ?>">
+                                <?php echo  $user['first_name']  ?>
+                            </a>
+                        </td>
+                        <td><?php echo  $user['email']  ?></td>
+                        <td><?php echo  $user['title']  ?></td>
+                    </tr>
+
+                <?php }?>
+
+                </tbody>
+            </table>
+        </div>
     </div>
 
 

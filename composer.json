@@ -16,8 +16,8 @@
 
 
     "require": {
-        "jr-cologne/db-class": "^2.4",
-        "bramus/router": "~1.6"
+        "bramus/router": "~1.6",
+        "thingengineer/mysqli-database-class": "dev-master"
     }
 
 }

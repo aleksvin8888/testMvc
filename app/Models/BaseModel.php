@@ -2,9 +2,9 @@
 
 namespace App\Models;
 
-use JRCologne\Utils\Database\DB;
-use JRCologne\Utils\Database\QueryBuilder;
 
+
+use MysqliDb;
 
 class BaseModel
 {
@@ -12,16 +12,11 @@ class BaseModel
     {
         include DOCUMENT_ROOT . '/config/config_db.php';
 
-        $conn = new DB(new QueryBuilder);
+        $conn = new MysqliDb ($db['host'], $db['user'], $db['pass'], $db['dbname']);
 
-        if (!$conn->connect($db['dsn'], $db['user'], $db['pass'])) {
+        if (!$conn) {
             echo 'Connection to database failed!<br>';
 
-            $e = $conn->getPDOException();
-
-            if ($e) {
-                echo '<pre>', print_r($e), '</pre>';
-            }
         } else {
             echo 'Successfully connected to database!<br>';
             return $conn;
