@@ -3,9 +3,8 @@
 namespace App\Controllers;
 
 
-use JRCologne\Utils\Database\DB;
-use JRCologne\Utils\Database\QueryBuilder;
 
+use App\Models\DepartmentModel;
 
 class HomeController
 {
@@ -14,9 +13,8 @@ class HomeController
     public function home()
     {
 
-        $data = [
-          'title' => "test title"
-        ];
+        $department = new DepartmentModel();
+        $departments = $department->getAll();
 
         require_once DOCUMENT_ROOT . '/app/views/main.php';
 

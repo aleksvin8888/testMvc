@@ -79,14 +79,15 @@
             <div class="bg-light p-5 rounded">
                 <div class="col-sm-8 mx-auto">
                     <h3>Add new user</h3>
-                    <form action="" method="post">
+                    <form action="/user" method="POST">
                         <div class="mb-3">
                             <label for="inputEmail" class="form-label">Email address</label>
                             <input class="form-control"
                                    name="email"
                                    type="email"
                                    id="inputEmail"
-                                   aria-describedby="emailHelp">
+                                   aria-describedby="emailHelp"
+                                   required>
                             <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                         </div>
                         <div class="mb-3">
@@ -94,35 +95,32 @@
                             <input class="form-control"
                                    name="first_name"
                                    type="text"
-                                   id="inputFirstName">
+                                   id="inputFirstName"
+                                   required>
                         </div>
                         <div class="mb-3">
                             <label for="inputAddress" class="form-label">Address</label>
                             <input class="form-control"
                                    name="address"
                                    type="text"
-                                   id="inputAddress">
+                                   id="inputAddress"
+                                   required>
                         </div>
                         <div class="mb-3">
                             <label for="inputPhone" class="form-label">Phone</label>
                             <input class="form-control"
                                    name="phone"
                                    type="text"
-                                   id="inputPhone">
+                                   id="inputPhone"
+                                   required>
                         </div>
                         <div class="mb-3">
                             <label for="inputComment" class="form-label">Comment</label>
                             <input name="comment"
                                    type="text"
                                    class="form-control"
-                                   id="inputComment">
-                        </div>
-                        <div class="mb-3">
-                            <label for="inputDepartment" class="form-label">Select Department</label>
-                            <input name="comment"
-                                   type="text"
-                                   class="form-control"
-                                   id="inputDepartment">
+                                   id="inputComment"
+                                   required>
                         </div>
 
                         <div class="mb-3">
@@ -132,12 +130,13 @@
                                     name="department_id"
                                     required>
                                 <option value="">Select</option>
+                            <?php foreach($departments as $department)  { ?>
 
-                                <option value="1"> dep 1</option>
-                                <option value="1"> dep 2</option>
-                                <option value="1"> dep 3</option>
-                                <option value="1"> dep 4</option>
-                                <option value="1"> dep 5</option>
+                                <option value="<?php echo  $department['id'] ?>">
+                                    <?php echo $department['title'] ?>
+                                </option>
+
+                          <?php  } ?>
 
                             </select>
                         </div>

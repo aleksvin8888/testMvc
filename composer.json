@@ -17,7 +17,9 @@
 
     "require": {
         "bramus/router": "~1.6",
-        "thingengineer/mysqli-database-class": "dev-master"
+        "thingengineer/mysqli-database-class": "dev-master",
+        "pear/http_request2": "^2.5",
+        "ext-http": "*"
     }
 
 }

@@ -4,7 +4,7 @@ namespace App\Models;
 
 class UserModel extends BaseModel
 {
-    // GET METHODS
+
 
     public function getAll()
     {
@@ -24,6 +24,19 @@ class UserModel extends BaseModel
         $data = $this->conn()->rawQuery('SELECT * from users 
                         LEFT JOIN departments ON users.department_id = departments.id
                         where users.id = '. $id );
+
+        return $data;
+    }
+
+    public function create($data)
+    {
+        $user = $this->conn()->insert ('users', $data);
+
+        if($user) {
+            $data = 'user was created. Id=' . $user;
+        } else {
+            $data = 'Erorr  on creete';
+        }
 
         return $data;
     }
