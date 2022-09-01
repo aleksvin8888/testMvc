@@ -76,7 +76,7 @@
         <div class="row y-5">
 
             <div class="m-2">
-                <a class="btn btn-primary btn-sm" href="#" title="Create">
+                <a class="btn btn-primary btn-sm" href="/department" title="Create">
                     Create new department <i class="fa-solid fa-plus"></i>
                 </a>
 

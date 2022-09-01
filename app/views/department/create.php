@@ -75,7 +75,25 @@
 
 
     <div class="container">
-        Department Show
+        <div>
+            <div class="bg-light p-5 rounded">
+                <div class="col-sm-8 mx-auto">
+                    <h3>Create new department</h3>
+                    <form action="/department" method="post">
+                        <div class="mb-3">
+                            <label for="inputTitle" class="form-label">Title</label>
+                            <input class="form-control"
+                                   name="title"
+                                   type="text"
+                                   id="inputTitle"
+                                   required>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
 
 

@@ -33,7 +33,7 @@ class UserModel extends BaseModel
         $user = $this->conn()->insert ('users', $data);
 
         if($user) {
-            $data = 'user was created. Id=' . $user;
+            $data = 'user was created. Id= ' . $user;
         } else {
             $data = 'Erorr  on creete';
         }

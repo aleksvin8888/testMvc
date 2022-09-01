@@ -5,12 +5,7 @@ namespace App\Models;
 
 class DepartmentModel extends BaseModel
 {
-    protected $id;
-    protected $title;
 
-
-
-    // GET METHODS
 
     public function getAll()
     {
@@ -20,40 +15,22 @@ class DepartmentModel extends BaseModel
 
     }
 
-    public function getId()
-    {
-        return $this->id;
-    }
-
-    public function getTitle()
-    {
-        return $this->title;
-    }
-
-    // SET METHODS
-    public function setTitle(string $title)
-    {
-        $this->title = $title;
-    }
-
-
-    public function read(int $id)
-    {
-        $this->title = 'My first Product';
-
-        return $this;
-    }
-
-    public function update(int $id, array $data)
+    public function create($data)
     {
 
+        $department = $this->conn()->where("title", $data['title'])->getOne("departments");
+
+        if($department) {
+            $data = "Департамент з такою назвою вже існує ";
+        } else {
+
+            if($this->conn()->insert('departments', $data)) {
+                $data = "Департамент створено успішно";
+            }
+        }
+
+        return $data;
     }
-
-    public function delete(int $id)
-    {
-
-    }
-
 
 
 }

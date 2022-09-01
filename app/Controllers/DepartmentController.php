@@ -20,10 +20,30 @@ class DepartmentController
 
     }
 
-    public function show()
+    public function create()
     {
 
-        require_once DOCUMENT_ROOT . '/app/views/department/show.php';
+        require_once DOCUMENT_ROOT . '/app/views/department/create.php';
+    }
+
+    public function store()
+    {
+        if(isset($_POST)){
+            if(!empty($_POST['title'])) {
+
+                $department = new DepartmentModel();
+                $data = $department->create($_POST);
+
+            } else {
+                $data = "Поле не може бути порожнім";
+            }
+
+        }
+
+        $department = new DepartmentModel();
+        $departments = $department->getAll();
+        echo $data;
+        require_once DOCUMENT_ROOT . '/app/views/department/index.php';
     }
 
 }
