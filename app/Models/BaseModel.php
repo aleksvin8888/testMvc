@@ -15,10 +15,8 @@ class BaseModel
         $conn = new MysqliDb ($db['host'], $db['user'], $db['pass'], $db['dbname']);
 
         if (!$conn) {
-            echo 'Connection to database failed!<br>';
-
+            echo 'Помилка підключення до бази даних<br>';
         } else {
-            echo 'Successfully connected to database!<br>';
             return $conn;
         }
     }

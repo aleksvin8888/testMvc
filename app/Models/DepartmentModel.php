@@ -32,5 +32,15 @@ class DepartmentModel extends BaseModel
         return $data;
     }
 
+    public function delete($id)
+    {
+
+        if(  $this->conn()->where('id', $id)->delete('departments')   ) {
+            $data = 'Департамент видалено успішно';
+        }
+
+        return $data;
+    }
+
 
 }

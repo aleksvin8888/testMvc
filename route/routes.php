@@ -15,6 +15,7 @@ $router->post('/user', 'App\Controllers\UserController@store');
 $router->get('/departments', 'App\Controllers\DepartmentController@index');
 $router->get('/department', 'App\Controllers\DepartmentController@create');
 $router->post('/department', 'App\Controllers\DepartmentController@store');
+$router->post('/department/{id}', 'App\Controllers\DepartmentController@delete');
 
 
 

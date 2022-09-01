@@ -103,9 +103,11 @@
                            </a>
                        </td>
                        <td>
-                           <a class="btn btn-outline-danger btn-sm" href="#">
-                               delete
-                           </a>
+                           <form class="mb-0" action="/department/<?php echo  $department['id']  ?>" method="POST">
+                                   <input type="hidden" >
+                             <button type="submit" class="btn btn-danger btn-sm">delete</button>
+                           </form>
+
                        </td>
                    </tr>
 

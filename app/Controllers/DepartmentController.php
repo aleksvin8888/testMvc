@@ -43,7 +43,24 @@ class DepartmentController
         $department = new DepartmentModel();
         $departments = $department->getAll();
         echo $data;
+
         require_once DOCUMENT_ROOT . '/app/views/department/index.php';
     }
+
+
+    public function delete($id)
+    {
+
+        $department = new DepartmentModel();
+        $data = $department->delete($id);
+        echo $data;
+
+        $department = new DepartmentModel();
+        $departments = $department->getAll();
+
+        require_once DOCUMENT_ROOT . '/app/views/department/index.php';
+
+    }
+
 
 }
