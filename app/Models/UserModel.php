@@ -30,13 +30,19 @@ class UserModel extends BaseModel
 
     public function create($data)
     {
-        $user = $this->conn()->insert ('users', $data);
 
-        if($user) {
-            $data = 'user was created. Id= ' . $user;
+        if($this->conn()->where("email", $data['email'])->getOne("users")) {
+            $data = 'Помилка користувач з вказаним email вже існує';
         } else {
-            $data = 'Erorr  on creete';
+            $user = $this->conn()->insert ('users', $data);
+
+            if($user) {
+                $data = 'Користувач. Id= ' . $user . 'створено успішно';
+            } else {
+                $data = 'Помилка при збереженні';
+            }
         }
+
 
         return $data;
     }
