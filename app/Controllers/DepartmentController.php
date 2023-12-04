@@ -31,6 +31,8 @@ class DepartmentController
         if(isset($_POST)){
             if(!empty($_POST['title'])) {
 
+
+
                 $department = new DepartmentModel();
                 $data = $department->create($_POST);
 
